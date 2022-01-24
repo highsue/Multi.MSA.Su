@@ -1,3 +1,7 @@
+from flask import Flask
+import json
+import requests
+
 app = Flask(__name__)
 @app.route("/") 
 def FlaskLab(): 
@@ -9,9 +13,6 @@ def FlaskData():
     dataURL = "https://api.odcloud.kr/api/apnmOrg/v1/list?"
     dataURL += "page=" + str(1) + "&perPage=" + str(10)  
     dataURL += "&cond" + "%5BorgZipaddr%3A%3ALIKE%5D"+"=종로구"
-    dataURL += "&serviceKey=" + keyValue
-    dataResult = requests.get(dataURL)
-    return json.loads(dataResult)  D=%EC%A2%85%EB%A1%9C%EA%B5%AC"+"=종로구"
     dataURL += "&serviceKey=" + keyValue
     dataResult = requests.get(dataURL)
     return json.loads(dataResult)  
